@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'SimpleContactsTests' target in the 'SimpleContactsTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A18D13A13919BF500213846 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A18D13913919BF500213846 /* UIKit.framework */; };
+		9A18D13C13919BF500213846 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A18D13B13919BF500213846 /* Foundation.framework */; };
+		9A18D13E13919BF500213846 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A18D13D13919BF500213846 /* CoreGraphics.framework */; };
+		9A18D14413919BF500213846 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A18D14213919BF500213846 /* InfoPlist.strings */; };
+		9A18D14713919BF500213846 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18D14613919BF500213846 /* main.m */; };
+		9A18D14A13919BF500213846 /* SimpleContactsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18D14913919BF500213846 /* SimpleContactsAppDelegate.m */; };
+		9A18D14D13919BF500213846 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A18D14B13919BF500213846 /* MainWindow.xib */; };
+		9A18D15013919BF500213846 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18D14F13919BF500213846 /* RootViewController.m */; };
+		9A18D15313919BF500213846 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A18D15113919BF500213846 /* RootViewController.xib */; };
+		9A18D15A13919BF500213846 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A18D13913919BF500213846 /* UIKit.framework */; };
+		9A18D15B13919BF500213846 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A18D13B13919BF500213846 /* Foundation.framework */; };
+		9A18D15C13919BF500213846 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A18D13D13919BF500213846 /* CoreGraphics.framework */; };
+		9A18D16413919BF500213846 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A18D16213919BF500213846 /* InfoPlist.strings */; };
+		9A18D16713919BF600213846 /* SimpleContactsTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 9A18D16613919BF600213846 /* SimpleContactsTests.h */; };
+		9A18D16913919BF600213846 /* SimpleContactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18D16813919BF600213846 /* SimpleContactsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A18D15D13919BF500213846 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A18D12C13919BF500213846 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A18D13413919BF500213846;
+			remoteInfo = SimpleContacts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9A18D13513919BF500213846 /* SimpleContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A18D13913919BF500213846 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9A18D13B13919BF500213846 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9A18D13D13919BF500213846 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9A18D14113919BF500213846 /* SimpleContacts-Info.plist */ = {isa = PBXFileReference; path = "SimpleContacts-Info.plist"; sourceTree = "<group>"; };
+		9A18D14313919BF500213846 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A18D14513919BF500213846 /* SimpleContacts-Prefix.pch */ = {isa = PBXFileReference; path = "SimpleContacts-Prefix.pch"; sourceTree = "<group>"; };
+		9A18D14613919BF500213846 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9A18D14813919BF500213846 /* SimpleContactsAppDelegate.h */ = {isa = PBXFileReference; path = SimpleContactsAppDelegate.h; sourceTree = "<group>"; };
+		9A18D14913919BF500213846 /* SimpleContactsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleContactsAppDelegate.m; sourceTree = "<group>"; };
+		9A18D14C13919BF500213846 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		9A18D14E13919BF500213846 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		9A18D14F13919BF500213846 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		9A18D15213919BF500213846 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		9A18D15913919BF500213846 /* SimpleContactsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleContactsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A18D16113919BF500213846 /* SimpleContactsTests-Info.plist */ = {isa = PBXFileReference; path = "SimpleContactsTests-Info.plist"; sourceTree = "<group>"; };
+		9A18D16313919BF500213846 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A18D16513919BF600213846 /* SimpleContactsTests-Prefix.pch */ = {isa = PBXFileReference; path = "SimpleContactsTests-Prefix.pch"; sourceTree = "<group>"; };
+		9A18D16613919BF600213846 /* SimpleContactsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleContactsTests.h; sourceTree = "<group>"; };
+		9A18D16813919BF600213846 /* SimpleContactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleContactsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A18D13213919BF500213846 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A18D13A13919BF500213846 /* UIKit.framework in Frameworks */,
+				9A18D13C13919BF500213846 /* Foundation.framework in Frameworks */,
+				9A18D13E13919BF500213846 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A18D15513919BF500213846 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A18D15A13919BF500213846 /* UIKit.framework in Frameworks */,
+				9A18D15B13919BF500213846 /* Foundation.framework in Frameworks */,
+				9A18D15C13919BF500213846 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A18D12A13919BF500213846 = {
+			isa = PBXGroup;
+			children = (
+				9A18D13F13919BF500213846 /* SimpleContacts */,
+				9A18D15F13919BF500213846 /* SimpleContactsTests */,
+				9A18D13813919BF500213846 /* Frameworks */,
+				9A18D13613919BF500213846 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9A18D13613919BF500213846 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A18D13513919BF500213846 /* SimpleContacts.app */,
+				9A18D15913919BF500213846 /* SimpleContactsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A18D13813919BF500213846 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A18D13913919BF500213846 /* UIKit.framework */,
+				9A18D13B13919BF500213846 /* Foundation.framework */,
+				9A18D13D13919BF500213846 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A18D13F13919BF500213846 /* SimpleContacts */ = {
+			isa = PBXGroup;
+			children = (
+				9A18D14813919BF500213846 /* SimpleContactsAppDelegate.h */,
+				9A18D14913919BF500213846 /* SimpleContactsAppDelegate.m */,
+				9A18D14B13919BF500213846 /* MainWindow.xib */,
+				9A18D14E13919BF500213846 /* RootViewController.h */,
+				9A18D14F13919BF500213846 /* RootViewController.m */,
+				9A18D15113919BF500213846 /* RootViewController.xib */,
+				9A18D14013919BF500213846 /* Supporting Files */,
+			);
+			path = SimpleContacts;
+			sourceTree = "<group>";
+		};
+		9A18D14013919BF500213846 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A18D14113919BF500213846 /* SimpleContacts-Info.plist */,
+				9A18D14213919BF500213846 /* InfoPlist.strings */,
+				9A18D14513919BF500213846 /* SimpleContacts-Prefix.pch */,
+				9A18D14613919BF500213846 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A18D15F13919BF500213846 /* SimpleContactsTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A18D16613919BF600213846 /* SimpleContactsTests.h */,
+				9A18D16813919BF600213846 /* SimpleContactsTests.m */,
+				9A18D16013919BF500213846 /* Supporting Files */,
+			);
+			path = SimpleContactsTests;
+			sourceTree = "<group>";
+		};
+		9A18D16013919BF500213846 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A18D16113919BF500213846 /* SimpleContactsTests-Info.plist */,
+				9A18D16213919BF500213846 /* InfoPlist.strings */,
+				9A18D16513919BF600213846 /* SimpleContactsTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A18D13413919BF500213846 /* SimpleContacts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A18D16C13919BF600213846 /* Build configuration list for PBXNativeTarget "SimpleContacts" */;
+			buildPhases = (
+				9A18D13113919BF500213846 /* Sources */,
+				9A18D13213919BF500213846 /* Frameworks */,
+				9A18D13313919BF500213846 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleContacts;
+			productName = SimpleContacts;
+			productReference = 9A18D13513919BF500213846 /* SimpleContacts.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A18D15813919BF500213846 /* SimpleContactsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A18D16F13919BF600213846 /* Build configuration list for PBXNativeTarget "SimpleContactsTests" */;
+			buildPhases = (
+				9A18D15413919BF500213846 /* Sources */,
+				9A18D15513919BF500213846 /* Frameworks */,
+				9A18D15613919BF500213846 /* Resources */,
+				9A18D15713919BF500213846 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A18D15E13919BF500213846 /* PBXTargetDependency */,
+			);
+			name = SimpleContactsTests;
+			productName = SimpleContactsTests;
+			productReference = 9A18D15913919BF500213846 /* SimpleContactsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A18D12C13919BF500213846 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 9A18D12F13919BF500213846 /* Build configuration list for PBXProject "SimpleContacts" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9A18D12A13919BF500213846;
+			productRefGroup = 9A18D13613919BF500213846 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A18D13413919BF500213846 /* SimpleContacts */,
+				9A18D15813919BF500213846 /* SimpleContactsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A18D13313919BF500213846 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A18D14413919BF500213846 /* InfoPlist.strings in Resources */,
+				9A18D14D13919BF500213846 /* MainWindow.xib in Resources */,
+				9A18D15313919BF500213846 /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A18D15613919BF500213846 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A18D16413919BF500213846 /* InfoPlist.strings in Resources */,
+				9A18D16713919BF600213846 /* SimpleContactsTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A18D15713919BF500213846 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A18D13113919BF500213846 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A18D14713919BF500213846 /* main.m in Sources */,
+				9A18D14A13919BF500213846 /* SimpleContactsAppDelegate.m in Sources */,
+				9A18D15013919BF500213846 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A18D15413919BF500213846 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A18D16913919BF600213846 /* SimpleContactsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A18D15E13919BF500213846 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A18D13413919BF500213846 /* SimpleContacts */;
+			targetProxy = 9A18D15D13919BF500213846 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A18D14213919BF500213846 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A18D14313919BF500213846 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9A18D14B13919BF500213846 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A18D14C13919BF500213846 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		9A18D15113919BF500213846 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A18D15213919BF500213846 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+		9A18D16213919BF500213846 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A18D16313919BF500213846 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A18D16A13919BF600213846 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9A18D16B13919BF600213846 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		9A18D16D13919BF600213846 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleContacts/SimpleContacts-Prefix.pch";
+				INFOPLIST_FILE = "SimpleContacts/SimpleContacts-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9A18D16E13919BF600213846 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleContacts/SimpleContacts-Prefix.pch";
+				INFOPLIST_FILE = "SimpleContacts/SimpleContacts-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9A18D17013919BF600213846 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleContacts.app/SimpleContacts";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleContactsTests/SimpleContactsTests-Prefix.pch";
+				INFOPLIST_FILE = "SimpleContactsTests/SimpleContactsTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9A18D17113919BF600213846 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleContacts.app/SimpleContacts";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleContactsTests/SimpleContactsTests-Prefix.pch";
+				INFOPLIST_FILE = "SimpleContactsTests/SimpleContactsTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A18D12F13919BF500213846 /* Build configuration list for PBXProject "SimpleContacts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A18D16A13919BF600213846 /* Debug */,
+				9A18D16B13919BF600213846 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A18D16C13919BF600213846 /* Build configuration list for PBXNativeTarget "SimpleContacts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A18D16D13919BF600213846 /* Debug */,
+				9A18D16E13919BF600213846 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9A18D16F13919BF600213846 /* Build configuration list for PBXNativeTarget "SimpleContactsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A18D17013919BF600213846 /* Debug */,
+				9A18D17113919BF600213846 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A18D12C13919BF500213846 /* Project object */;
+}
