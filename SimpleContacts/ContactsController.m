@@ -7,6 +7,7 @@
 //
 
 #import "ContactsController.h"
+#import "SimpleContactsAppDelegate.h"
 
 
 @implementation ContactsController
@@ -39,6 +40,7 @@
 
 - (void) addContact:(id) sender
 {
+    /* 
     Contact *contact = (Contact *)[NSEntityDescription insertNewObjectForEntityForName:@"Contact" inManagedObjectContext:managedObjectContext];
     [contact setName:@"Aaron"]; 
     [contact setEmail:@"amcleod@dacgroup.com"];
@@ -56,7 +58,7 @@
     
     [contactArray insertObject:contact atIndex:0];
     
-    [self.tableView reloadData];
+    [self.tableView reloadData]; */
 }
 
 - (void)fetchRecords { 
@@ -104,10 +106,6 @@
 {
     [super viewDidLoad];
     self.title = @"All Contacts";
-    UIBarButtonItem *addButton = 
-        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addContact:)];
-    self.navigationItem.rightBarButtonItem = addButton;
-    [addButton release];
     [self fetchRecords];
 }
 

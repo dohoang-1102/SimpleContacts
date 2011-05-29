@@ -7,19 +7,30 @@
 //
 
 #import "SimpleContactsAppDelegate.h"
-#import "ContactsController.h"
+#import "Contact.h"
 
 @implementation SimpleContactsAppDelegate
-@synthesize window, navigationController; 
+
+@synthesize window = _window;
+@synthesize navigationController, newContactView, nameField, emailField;
+@synthesize contactsTable, phoneField, addButton, saveContactButton; 
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
-    ContactsController *contactController = [[ContactsController alloc] initWithStyle:UITableViewStylePlain]; 
-    contactController.managedObjectContext = [self managedObjectContext];
-    
+    /* contactController = [[ContactsController alloc] initWithStyle:UITableViewStylePlain]; 
+    contactController.managedObjectContext = [self managedObjectContext];    
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:contactController];
-    [contactController release];
-    [window addSubview: [self.navigationController view]];
-    [window makeKeyAndVisible];
+    [contactController release]; */
+    [self.window addSubview: [navigationController view]];
+    [self.window makeKeyAndVisible];
+}
+
+- (IBAction) switchToAddContactView 
+{
+
+}
+- (IBAction) saveContact
+{
+    
 }
 
 // ...
@@ -30,8 +41,8 @@
     [managedObjectContext release];
     [managedObjectModel release];
     [persistentStoreCoordinator release];
-    [window release];
     [navigationController release];
+    [_window release];
     [super dealloc];
 }
 
@@ -90,7 +101,6 @@
         } 
     }
 }
-
 /**
  Returns the managed object context for the application.
  If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
