@@ -15,21 +15,19 @@
 @synthesize navigationController, newContactView, nameField, emailField;
 @synthesize contactsTable, phoneField, addButton, saveContactButton; 
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     /* contactController = [[ContactsController alloc] initWithStyle:UITableViewStylePlain]; 
     contactController.managedObjectContext = [self managedObjectContext];    
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:contactController];
     [contactController release]; */
-    [self.window addSubview: [navigationController view]];
+    [self.window addSubview:[navigationController view]];
     [self.window makeKeyAndVisible];
 }
 
-- (IBAction) switchToAddContactView 
-{
-
+- (IBAction) switchToAddContactView {
+    [navigationController pushViewController:newContactView animated:TRUE];
 }
-- (IBAction) saveContact
-{
+- (IBAction) saveContact {
     
 }
 
