@@ -7,13 +7,32 @@
 //
 
 #import "SimpleContactsAppDelegate.h"
+#import "ContactsController.h"
 
 @implementation SimpleContactsAppDelegate
+@synthesize window, navigationController; 
 
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+    ContactsController *contactController = [[ContactsController alloc] initWithStyle:UITableViewStylePlain]; 
+    contactController.managedObjectContext = [self managedObjectContext];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:contactController];
+    [contactController release];
+    [window addSubview: [self.navigationController view]];
+    [window makeKeyAndVisible];
+}
 
-@synthesize window=_window;
+// ...
+// ... other template methods
+// ... 
 
-@synthesize navigationController=_navigationController;
+- (void)dealloc {
+    [managedObjectContext release];
+    [managedObjectModel release];
+    [persistentStoreCoordinator release];
+    [window release];
+    [navigationController release];
+    [super dealloc];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -61,13 +80,6 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
-}
-
-- (void)dealloc
-{
-    [_window release];
-    [_navigationController release];
-    [super dealloc];
 }
 
 @end
