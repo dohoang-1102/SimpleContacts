@@ -12,6 +12,7 @@
 @implementation ContactsController
 @synthesize managedObjectContext, contactArray;
 
+/*
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -20,7 +21,7 @@
     }
     return self;
 }
-
+ */
 - (void)dealloc
 {
     [managedObjectContext release];
@@ -38,7 +39,7 @@
 
 - (void) addContact:(id) sender
 {
-    Contact *contact = (Contact *)[NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:managedObjectContext];
+    Contact *contact = (Contact *)[NSEntityDescription insertNewObjectForEntityForName:@"Contact" inManagedObjectContext:managedObjectContext];
     [contact setName:@"Aaron"]; 
     [contact setEmail:@"amcleod@dacgroup.com"];
     [contact setPhone:@"555-234-2342"];
@@ -70,6 +71,7 @@
     // Define how we will sort the records
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    
     [request setSortDescriptors:sortDescriptors];
     [sortDescriptor release]; 
     
@@ -103,7 +105,7 @@
     [super viewDidLoad];
     self.title = @"All Contacts";
     UIBarButtonItem *addButton = 
-        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addTime:)];
+        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addContact:)];
     self.navigationItem.rightBarButtonItem = addButton;
     [addButton release];
     [self fetchRecords];
@@ -144,14 +146,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath { 
     
-    static NSString *CellIdentifier = @"Cell";
-    static NSDateFormatter *dateFormatter = nil; 
-    
-    if (dateFormatter == nil) {
-        dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"h:mm.ss a"];
-    }
-    
+    static NSString *CellIdentifier = @"Cell";    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier]; 
     
     if (cell == nil) {
