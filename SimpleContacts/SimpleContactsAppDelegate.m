@@ -13,13 +13,23 @@
 
 @synthesize window = _window;
 @synthesize navigationController, newContactView, nameField, emailField;
-@synthesize contactsTable, phoneField, addButton, saveContactButton, contactArray;
+@synthesize contactsTable, phoneField, saveContactButton, contactArray;
 @synthesize managedObjectModel, managedObjectContext;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    ContactsController *contactController = [[ContactsController alloc] initWithStyle:UITableViewStylePlain];
+	contactController.managedObjectContext = [self managedObjectContext];
+	UIButton *addButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    addButton.frame = CGRectMake(20, 20, 200, 44); // position in the parent view and set the size of the button
+    [addButton setTitle:@"Add Contact" forState:UIControlStateNormal];
+    // add targets and actions
+    [addButton addTarget:self action:@selector(switchToAddContactView:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [contactController.tableView addSubview:addButton];
+	self.navigationController = [[UINavigationController alloc] initWithRootViewController:contactController];
+    [addButton release];
     
     [self.window addSubview:[self.navigationController view]];
-    [self fetchRecords];
     [self.window makeKeyAndVisible];
 }
 
@@ -45,66 +55,6 @@
     [contactArray insertObject:contact atIndex:0];
     
     [contactsTable reloadData];
-}
-
-- (void)fetchRecords { 
-    
-    // Define our table/entity to use
-    NSEntityDescription *contact = [NSEntityDescription entityForName:@"Contact" inManagedObjectContext:[self managedObjectContext]]; 
-    
-    // Setup the fetch request
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:contact]; 
-    
-    // Define how we will sort the records
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-    
-    [request setSortDescriptors:sortDescriptors];
-    [sortDescriptor release]; 
-    
-    // Fetch the records and handle an error
-    NSError *error;
-    NSMutableArray *mutableFetchResults = [[managedObjectContext executeFetchRequest:request error:&error] mutableCopy]; 
-    
-    if (!mutableFetchResults) {
-        // Handle the error.
-        // This is a serious error and should advise the user to restart the application
-    } 
-    
-    // Save our fetched data to an array
-    [self setContactArray: mutableFetchResults];
-    [mutableFetchResults release];
-    [request release];
-} 
-
-- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [contactArray count];
-}
-
-- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath { 
-    
-    static NSString *CellIdentifier = @"Cell";    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier]; 
-    
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
-    } 
-    
-    Contact *contact = [self.contactArray objectAtIndex: [indexPath row]];
-    Contact *previousEvent = nil; 
-    
-    if ([self.contactArray count] > ([indexPath row] + 1)) {
-        previousEvent = [self.contactArray objectAtIndex: ([indexPath row] + 1)];
-    }
-    
-    [cell.textLabel setText: [NSString stringWithFormat:@"%@/%@/%@", [contact name], [contact phone], [contact email]]];     
-    return cell; 
-    
 }
 
 // ...
@@ -250,20 +200,6 @@
  */
 - (NSString *)applicationDocumentsDirectory {
 	return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-}
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
 }
 
 @end

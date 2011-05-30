@@ -11,12 +11,12 @@
 
 
 @interface ContactsController : UITableViewController {
-    NSManagedObjectContext * managedObjectContext;
+    NSManagedObjectContext *managedObjectContext;
     NSMutableArray * contactArray;
 }
 
-@property (nonatomic, retain) NSManagedObjectContext * managedObjectContext;
-@property (nonatomic, retain) NSMutableArray *contactArray; 
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;  
+@property (nonatomic, retain) NSMutableArray *contactArray;
 - (void) fetchRecords;
 - (void) addContact:(NSString *)name email:(NSString *)email phone:(NSString *)phone;
 

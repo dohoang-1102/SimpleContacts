@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "ContactsController.h"
 
 @interface SimpleContactsAppDelegate : NSObject <UIApplicationDelegate> {
     NSManagedObjectModel *managedObjectModel;
@@ -17,7 +18,6 @@
     UINavigationController *navigationController;
     // view for adding new contacts
     UIViewController *newContactView;
-    UIButton *addButton;
 
     // controls for the addContactView
     UIButton *saveContactButton;
@@ -36,9 +36,8 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 
-@property (nonatomic, retain) IBOutlet UIButton *addButton;
 @property (nonatomic, retain) IBOutlet UITableView *contactsTable;
-@property (nonatomic, retain) IBOutlet NSMutableArray *contactArray;
+@property (nonatomic, retain) NSMutableArray *contactArray;
 
 // controller and fields for the form
 @property (nonatomic, retain) IBOutlet UIViewController *newContactView;
@@ -51,8 +50,7 @@
 - (NSString *)applicationDocumentsDirectory;
 - (IBAction) saveContact;
 - (IBAction) switchToAddContactView;
-- (void)fetchRecords;
-- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView;
-- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+- (NSManagedObjectContext *) managedObjectContext;
+- (NSManagedObjectModel *)managedObjectModel;
 
 @end

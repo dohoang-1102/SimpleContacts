@@ -13,7 +13,7 @@
 @implementation ContactsController
 @synthesize managedObjectContext, contactArray;
 
-/*
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -22,7 +22,7 @@
     }
     return self;
 }
- */
+
 - (void)dealloc
 {
     [managedObjectContext release];
@@ -47,10 +47,8 @@
     
     NSError *error;
     
-    if(![managedObjectContext save:&error]){
-        
-        NSLog(@"Error with saving data");
-        
+    if(![managedObjectContext save:&error]) {        
+        NSLog(@"Error with saving data");        
     }
     
     [contactArray insertObject:contact atIndex:0];
@@ -166,7 +164,6 @@
     return cell; 
     
 }
-
 
 /*
 // Override to support conditional editing of the table view.
