@@ -23,7 +23,7 @@
 		9A18D3801391A3C000213846 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18D37F1391A3C000213846 /* Contact.m */; };
 		9A18D3831391A61700213846 /* ContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18D3821391A61700213846 /* ContactsController.m */; };
 		9A18D3851391AD8D00213846 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A18D3841391AD8D00213846 /* CoreData.framework */; };
-		9A2043B01391E1EB00D60D39 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A2043AF1391E1EB00D60D39 /* Window.xib */; };
+		9A2043B01391E1EB00D60D39 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A2043AF1391E1EB00D60D39 /* MainWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,7 @@
 		9A18D3811391A61700213846 /* ContactsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsController.h; sourceTree = "<group>"; };
 		9A18D3821391A61700213846 /* ContactsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsController.m; sourceTree = "<group>"; };
 		9A18D3841391AD8D00213846 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		9A2043AF1391E1EB00D60D39 /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
+		9A2043AF1391E1EB00D60D39 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +128,7 @@
 				9A18D3811391A61700213846 /* ContactsController.h */,
 				9A18D3821391A61700213846 /* ContactsController.m */,
 				9A18D37F1391A3C000213846 /* Contact.m */,
-				9A2043AF1391E1EB00D60D39 /* Window.xib */,
+				9A2043AF1391E1EB00D60D39 /* MainWindow.xib */,
 			);
 			path = SimpleContacts;
 			sourceTree = "<group>";
@@ -233,7 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A18D14413919BF500213846 /* InfoPlist.strings in Resources */,
-				9A2043B01391E1EB00D60D39 /* Window.xib in Resources */,
+				9A2043B01391E1EB00D60D39 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

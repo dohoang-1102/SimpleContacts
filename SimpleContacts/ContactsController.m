@@ -38,27 +38,24 @@
     return [contactArray count];
 }
 
-- (void) addContact:(id) sender
+- (void) addContact:(NSString *)name email:(NSString *)email phone:(NSString *)phone
 {
-    /* 
     Contact *contact = (Contact *)[NSEntityDescription insertNewObjectForEntityForName:@"Contact" inManagedObjectContext:managedObjectContext];
-    [contact setName:@"Aaron"]; 
-    [contact setEmail:@"amcleod@dacgroup.com"];
-    [contact setPhone:@"555-234-2342"];
+    [contact setName:name]; 
+    [contact setEmail:email];
+    [contact setPhone:phone];
     
     NSError *error;
     
     if(![managedObjectContext save:&error]){
         
-	    //This is a serious error saying the record
-	    //could not be saved. Advise the user to
-	    //try again or restart the application. 
+        NSLog(@"Error with saving data");
         
     }
     
     [contactArray insertObject:contact atIndex:0];
     
-    [self.tableView reloadData]; */
+    [self.tableView reloadData];
 }
 
 - (void)fetchRecords { 
@@ -82,8 +79,7 @@
     NSMutableArray *mutableFetchResults = [[managedObjectContext executeFetchRequest:request error:&error] mutableCopy]; 
     
     if (!mutableFetchResults) {
-        // Handle the error.
-        // This is a serious error and should advise the user to restart the application
+        NSLog(@"Error with fetching data");
     } 
     
     // Save our fetched data to an array

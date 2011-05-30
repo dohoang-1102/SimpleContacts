@@ -18,6 +18,6 @@
 @property (nonatomic, retain) NSManagedObjectContext * managedObjectContext;
 @property (nonatomic, retain) NSMutableArray *contactArray; 
 - (void) fetchRecords;
-- (void) addContact:(id)sender;
+- (void) addContact:(NSString *)name email:(NSString *)email phone:(NSString *)phone;
 
 @end
