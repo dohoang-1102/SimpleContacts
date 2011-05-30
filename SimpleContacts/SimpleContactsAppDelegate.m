@@ -20,6 +20,7 @@
     
     [self.window addSubview:[self.navigationController view]];
     [self fetchRecords];
+    [self.contactsTable reloadData];
     [self.window makeKeyAndVisible];
 }
 

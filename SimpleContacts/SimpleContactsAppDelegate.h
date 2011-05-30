@@ -38,7 +38,7 @@
 
 @property (nonatomic, retain) IBOutlet UIButton *addButton;
 @property (nonatomic, retain) IBOutlet UITableView *contactsTable;
-@property (nonatomic, retain) IBOutlet NSMutableArray *contactArray;
+@property (nonatomic, retain) NSMutableArray *contactArray;
 
 // controller and fields for the form
 @property (nonatomic, retain) IBOutlet UIViewController *newContactView;
